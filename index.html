@@ -1,23 +1,24 @@
 <?php
-  $nome = 'Fulano';
+$temp = array(
+  '2010' => array(
+  'Outubro' => 25,
+  'Novembro' => 23,
+  'Dezembro' => 20),
+  '2011' => array(
+  'Outubro' => 26,
+  'Novembro' => 22,
+  'Dezembro' => 21),
+  '2012' => array(
+  'Outubro' => 27,
+  'Novembro' => 28,
+  'Dezembro' => 19)
+);
 
-  switch($nome) {
-    case 'Fulano':
-      echo 'E ai Fulano!';
-      break;
+foreach($temp as $ano => $meses){
+  echo "Temperaturas em $ano<br />";
 
-    case 'Sicrano':
-      echo 'E ai Sicrano!';
-      break;
-
-    case 'Beltrano':
-      echo 'E ai Beltrano!';
-      break;
-
-    default:
-      echo 'Qual é o seu nome?';
-      break;
+  foreach($meses as $mes => $temp) {
+    echo "$mes: $temp graus<br />";
   }
-
-  // Resultado é: E ai Fulano!
+}
 ?>
